@@ -31,8 +31,12 @@ void ARepeatingMotion::Tick( float DeltaTime )
 	NewLocation.X += DeltaHeight * wobbleX;
 	NewLocation.Y += DeltaHeight * wobbleY;
 	NewLocation.Z += DeltaHeight * wobbleZ;
-
 	
+	//this -> SetActorRotation(spin);
+	FRotator ActorRotation = this->GetActorRotation();
+	ActorRotation.Yaw += spin;
+	this->SetActorRotation(ActorRotation);
+
 
 	RunningTime += DeltaTime;
 	SetActorLocation(NewLocation);

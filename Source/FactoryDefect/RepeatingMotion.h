@@ -31,5 +31,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		float wobbleZ;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float spin;
+
 
 };
